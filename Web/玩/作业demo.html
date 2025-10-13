@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>试用期作业1</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      color: #0000ff;
+      font-size: 32px;
+      font-weight: 900;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .subtitle {
+      color: rgba(131, 7, 152, 0.9);
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .content {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: red;
+      font-size: 18px;
+      text-decoration: underline;
+    }
+
+    .image-container {
+      width: 20vw;
+      height: 400px;
+      background-color: #f0f0f0;
+      background-image: url("./first-show-demo/牙仙.webp");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .second-image {
+      width: 20vw;
+      height: 300px;
+      background-color: #e0e0e0;
+      background-image: url("./first-show-demo/十四行诗.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    .video-wrapper {
+      width: 40vw;
+      height: 500px;
+      background-color: #000;
+    }
+
+    .section {
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .footer {
+      color: blue;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 标题部分 -->
+  <div class="section">
+    <h1 class="header">试用期作业1</h1>
+    <h2 class="subtitle">探索视觉与听觉的艺术世界-2025年9月23日</h2>
+  </div>
+
+  <!-- 介绍部分 -->
+  <div class="section">
+    <p class="content">
+      欢迎来到我们的媒体展示平台。这里汇集了<span class="highlight">精美的图片</span>和<span class="highlight">精彩的视频内容</span>，让您体验不同形式的艺术表达。
+    </p>
+    <p class="highlight">
+      滚动浏览，发现更多精彩内容！
+    </p>
+  </div>
+
+  <!-- 艺术图片展示 -->
+  <div class="section">
+    <h3 class="subtitle">艺术图片展示</h3>
+    <div class="image-container"></div>
+    <p class="content">
+      这幅作品展现了独特的艺术视角和色彩运用，通过细腻的笔触传达了丰富的情感。
+    </p>
+  </div>
+
+  <!-- 创意摄影 -->
+  <div class="section">
+    <h3 class="subtitle">创意摄影</h3>
+    <div class="second-image"></div>
+    <p class="content">
+      这张摄影作品捕捉了瞬间的美丽，光影的巧妙结合创造出令人难忘的视觉效果。
+    </p>
+    <div>
+      <img src="./first-show-demo/牙仙.webp" alt="艺术作品 - 牙仙" style="width: 300px; height: auto;">
+      <img src="https://ts1.tc.mm.bing.net/th/id/OIP-C.JEOBRbuFzuFQFOtZDNLrDgHaJJ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+        alt="摄影作品-x" style="width: 300px; height: auto;">
+    </div>
+  </div>
+
+  <!-- 视频欣赏 -->
+  <div class="section">
+    <h3 class="subtitle">视频欣赏</h3>
+    <div class="video-wrapper">
+      <video src="./first-show-demo/酒神颂.mp4" width="100%" height="100%" controls></video>
+    </div>
+    <p class="content">
+      这段视频融合了音乐与画面，呈现出独特的艺术氛围和叙事风格。
+    </p>
+  </div>
+
+  <!-- 互动区域 -->
+  <div class="section">
+    <h3 class="subtitle">互动反馈</h3>
+    <p class="content">请分享您对这些作品的看法：</p>
+    <input type="text" placeholder="您的姓名" style="margin-bottom: 10px;"><br>
+    <textarea placeholder="请输入您的评论..." style="width: 500px; height: 100px; margin-bottom: 10px;"></textarea><br>
+    <button onclick="alert('感谢您的反馈！')" style="color: blue; font-size: 16px;">提交评论</button>
+    <button onclick="alert('反馈已清除！')" style="color: red; font-size: 16px; margin-left: 10px;">清除</button>
+    <br><br>
+    <p class="content">您最喜欢哪类作品？</p>
+    <input type="checkbox"> <span>艺术图片</span><br>
+    <input type="checkbox"> <span>创意摄影</span><br>
+    <input type="checkbox"> <span>视频作品</span>
+  </div>
+
+  <!-- 更多选项 -->
+  <div class="section">
+    <h4 class="subtitle">探索更多</h4>
+    <p class="content">调整页面显示效果：</p>
+    <input type="range" min="10" max="30" value="16"
+      oninput="document.querySelector('.content').style.fontSize = this.value + 'px'">
+    <span>调整字体大小</span>
+    <br>
+    <input type="color" oninput="document.body.style.backgroundColor = this.value">
+    <span>改变背景颜色</span>
+  </div>
+
+  <!-- 文件上传示例 -->
+  <div class="section">
+    <h4 class="subtitle">分享您的作品</h4>
+    <p class="content">上传您的创意作品：</p>
+    <input type="file" accept="image/*,video/*">
+  </div>
+
+  <!-- 页脚信息 -->
+  <div class="section">
+    <div class="footer">
+      © 2023 创意媒体展示平台 | 感谢您的访问
+    </div>
+  </div>
+</body>
+
+</html>
